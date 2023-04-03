@@ -2,7 +2,7 @@ import os
 import numpy as np
 import tempfile
 import unittest
-from linear_regressor import Dataset, LinearRegressor
+from GPT_linear_regressor.linear_regressor import Dataset, LinearRegressor
 
 
 class TestDataset(unittest.TestCase):

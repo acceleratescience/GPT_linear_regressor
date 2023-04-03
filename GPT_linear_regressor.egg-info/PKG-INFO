@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: GPT-linear-regressor
+Version: 1.0
+Summary: A linear regression application packaged by GPT-4
+Home-page: UNKNOWN
+Author: Accelerate Science
+Author-email: accelerate-mle@cst.cam.ac.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+UNKNOWN
+
