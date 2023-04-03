@@ -61,12 +61,13 @@ class TestLinearRegressor(unittest.TestCase):
         score_train = self.regressor.score(test=False)
         self.assertAlmostEqual(score_train, 1.0, places=5)
 
+    # GPT makes the same mistake here as with test_train.
     def test_save_coeffs(self):
         self.regressor.train()
         filename = os.path.join(tempfile.gettempdir(), "coeffs")
         self.regressor.save_coeffs(filename)
         loaded_thetas = np.load(f'{filename}.npy')
-        np.testing.assert_allclose(loaded_thetas, np.array([[0], [2]]), rtol=1e-5)
+        np.testing.assert_allclose(loaded_thetas, np.array([[0], [2]]), atol=1e-5)
         os.remove(f'{filename}.npy')
 
 
