@@ -16,7 +16,7 @@ class Dataset():
         Args:
             csv_file (str): Path to the csv file.
         """
-        self.data = np.loadtxt(csv_file, delimiter=',').T
+        self.data = np.loadtxt(csv_file, delimiter=',')
         self.X = self.data[:, 0]
         self.y = self.data[:, 1]
 
