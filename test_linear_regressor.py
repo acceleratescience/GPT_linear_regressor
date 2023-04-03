@@ -26,11 +26,11 @@ class TestDataset(unittest.TestCase):
 
     def test_test_train_split(self):
         self.dataset.from_numpy(self.array)
-        X_train, X_test, y_train, y_test = self.dataset.test_train_split(pct_test=0.5)
-        np.testing.assert_array_equal(X_train, np.array([1, 2]))
-        np.testing.assert_array_equal(X_test, np.array([3, 4]))
-        np.testing.assert_array_equal(y_train, np.array([2, 4]))
-        np.testing.assert_array_equal(y_test, np.array([6, 8]))
+        self.dataset.test_train_split(pct_test=0.5)
+        np.testing.assert_array_equal(self.dataset.X_train, np.array([1, 2]))
+        np.testing.assert_array_equal(self.dataset.X_test, np.array([3, 4]))
+        np.testing.assert_array_equal(self.dataset.y_train, np.array([2, 4]))
+        np.testing.assert_array_equal(self.dataset.y_test, np.array([6, 8]))
 
 
 class TestLinearRegressor(unittest.TestCase):
