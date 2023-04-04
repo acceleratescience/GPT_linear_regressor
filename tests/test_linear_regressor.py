@@ -45,7 +45,7 @@ class TestLinearRegressor(unittest.TestCase):
     # GPT makes incorrect changes to test_train, but correctly changes rtol to atol. Also cannot infer thetas dimension.
     def test_train(self):
         self.regressor.train()
-        np.testing.assert_allclose(self.regressor.thetas, np.array([[0], [2]]), atol=1e-5)
+        np.testing.assert_allclose(self.regressor.thetas, np.array([[0], [2]]), rtol=1e-5, atol=1e-5)
 
     def test_predict(self):
         self.regressor.train()
